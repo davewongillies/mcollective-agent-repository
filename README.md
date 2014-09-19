@@ -10,4 +10,4 @@ plugin.repository.NAME.type: git
 ```
 
 # Triggering runs
-`mco rpc repository update`
+`mco rpc repository update NAME`
