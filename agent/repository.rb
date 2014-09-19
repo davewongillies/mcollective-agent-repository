@@ -16,7 +16,7 @@ module MCollective
       def update_repos(repos_name)
         repos = conf_for_repos repos_name
         require 'pp'
-        pp repos 
+        pp repos
         repos[:name] = repos_name
         repos[:type] = 'auto' unless repos[:type]
 
@@ -70,9 +70,9 @@ module MCollective
         conf = {}
         Config.instance.pluginconf.each do |k,v|
          if k =~ /^repository\./
-            trim_k = k.gsub /^repository\./, ''
+            trim_k = k.gsub(/^repository\./, '')
             conf[trim_k] = v
-          end
+         end
         end
         conf
       end
@@ -80,4 +80,3 @@ module MCollective
     end # end Repository
   end # end Agent
 end # end Mcollective
-
